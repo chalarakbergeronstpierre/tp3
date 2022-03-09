@@ -47,8 +47,8 @@
                     </div>
                     <div>
                         <p>
-                        <label for="nom">Nom</label>
-                        <input type="text" name="nom" id="nom" required>
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" id="nom" required>
                         </p>
                         <p class="avertissement"></p>
                     </div>
@@ -64,7 +64,7 @@
                 <div>
                     <p>
                         <label for="ville">Ville</label>
-                        <input type="text" name="ville" id="ville">
+                        <input type="text" name="ville" id="ville" required>
                     </p>
                     <p class="avertissement">Le nom de la ville ou du village est requis.</p>
                 </div>
@@ -146,14 +146,15 @@
                 <div>
                     <p>
                         <label for="codePostal">Code Postal (X1X X1X)</label>
-                        <input type="text" name="codePostal" id="codePostal" required>
+                        <input type="text" name="codePostal" id="codePostal" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
                     </p>
                     <p class="avertissement"> Le code postal doit respecter le format X1X 1X1. </p>
                 </div>
                 <div>
                     <p>
                         <label for="courriel">courriel</label>
-                        <input type="email" name="courriel" id="courriel" required>
+                        <input type="email" name="courriel" id="courriel"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     <p class="avertissement"> Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
                     </p>
                 </div>
@@ -161,22 +162,19 @@
                     <legend>Téléphone (indicatif - numéro)</legend>
                     <p>
                         <label for="indicatif">Indicatif</label>
-                        <input type="text" name="indicatif" id="indicatif" minlength="3" maxlength="3" required>
+                        <input type="text" name="indicatif" id="indicatif" minlength = "3" maxlength = "3" required pattern="[0-9]{3}">
                     </p>
                     <p>-</p>
                     <div>
                         <p>
                             <label for="numero">Numéro</label>
-                            <input type="text" name="numero" id="numero" required>
+                            <input type="text" name="numero" id="numero" minlength = "7" maxlength = "7"  required pattern="[0-9]{3}-[0-9]{4}">
                         </p>
                         <p class="avertissement">Attention, le numéro de téléphone ne doit pas comporter d’espace ou
                             de trait d’union. </p>
                     </div>
                 </fieldset>
             </fieldset>
-        </form>
-
-        <form action="index.html" method="get">
             <legend>
                 <h2>Question du jour</h2>
             </legend>
@@ -206,7 +204,7 @@
                 </div>
                 <div>
                     <label for="date">Année</label>
-                    <input type="text" name="annee" id="annee" required>
+                    <input type="text" name="annee" id="annee" minlength="4" maxlength="4" required>
                     <p class="avertissement">Avertissement SVP, entrez la date complète.</p>
                 </div>
             </fieldset>
