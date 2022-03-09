@@ -40,7 +40,7 @@
                 <legend>
                     <h2>Coupon de participation</h2>
                 </legend>
-                <fieldset class="nom-complet">
+                <fieldset class="nom-complet ctnValidation">
                     <legend>Nom complet</legend>
                     <div>
                         <label for="prenom">Prénom</label>
@@ -51,24 +51,43 @@
                             <label for="nom">Nom</label>
                             <input type="text" name="nom" id="nom" required>
                         </p>
-                        <p class="avertissement"></p>
+                        <p class="erreur">
+                            <span>
+                                <span class=" screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                        </p>
+                            Le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
+
                     </div>
                 </fieldset>
 
-                <div>
+                <div class="ctnAdresse ctnValidation">
                     <p class="adresse">
                         <label for="adresse">Adresse</label>
                         <input type="text" name="adresse" id="adresse" required>
                     </p>
-                    <p class="avertissement">L’adresse est requise.</p>
+                    <p class="erreur">
+                        <span>
+                            <span class=" screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>
+                        L’adresse est requise.</p>
                 </div>
-                <div>
+                <div class=" ctnVille ctnValidation">
                     <p class="ville">
                         <label for="ville">Ville</label>
                         <input type="text" name="ville" id="ville" required>
                     </p>
-                    <p class="avertissement">Le nom de la ville ou du village est requis.</p>
-                </div>
+                    <p class="erreur">
+                        <span>
+                            <span class=" screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>
+                        Le nom de la ville ou du village est requis.</p>
+                </div class="ctnRegion ctnValidation">
                 <div class="region">
                     <label for="pays">Province ou État</label>
                     <select name="listeprovince" id="provinces" required>
@@ -144,22 +163,34 @@
                         </optgroup>
                     </select>
                 </div>
-                <div>
+                <div class="ctnCodePostal ctnValidation">
                     <p class="codePostal"> 
                         <label for="codePostal">Code Postal (X1X X1X)</label>
-                        <input type="text" name="codePostal" id="codePostal" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+                        <input type="text" name="codePostal" id="codePostal" title="X1X X1X" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
                     </p>
-                    <p class="avertissement"> Le code postal doit respecter le format X1X 1X1. </p>
+                    <p class="erreur">
+                        <span>
+                            <span class=" screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>
+                        Le code postal doit respecter le format X1X 1X1. </p>
                 </div>
-                <div>
+                <div class="ctnCourriel ctnValidation">
                     <p class="courriel">
                         <label for="courriel">courriel</label>
                         <input type="email" name="courriel" id="courriel"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                    <p class="avertissement"> Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
+                    <p class="erreur">
+                            <span>
+                                <span class=" screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                        </p>
+                        Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
                     </p>
                 </div>
-                <fieldset>
+                <fieldset class="ctnTel ctnValidation">
                     <legend>Téléphone (indicatif - numéro)</legend>
                     <p class="telephone">
                         <label for="indicatif">Indicatif</label>
@@ -169,17 +200,22 @@
                     <div>
                         <p>
                             <label for="numero">Numéro</label>
-                            <input type="text" name="numero" id="numero" minlength = "7" maxlength = "7"  required pattern="[0-9]{3}-[0-9]{4}">
+                            <input type="text" name="numero" id="numero" minlength = "8" maxlength = "8"  required pattern="[0-9]{3}-[0-9]{4}">
                         </p>
-                        <p class="avertissement">Attention, le numéro de téléphone ne doit pas comporter d’espace ou
-                            de trait d’union. </p>
+                        <p class="erreur">
+                            <span>
+                                <span class=" screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                        </p>
+                        Attention, le numéro de téléphone doit comporter un trait d’union. </p>
                     </div>
                 </fieldset>
             </fieldset>
             <legend>
                 <h2>Question du jour</h2>
             </legend>
-            <fieldset class="date">
+            <fieldset class="date ctnValidation">
                 <legend>Date à laquelle la question a été posée?</legend>
                 <div>
                     <label for="date">Jour</label>
@@ -206,10 +242,15 @@
                 <div>
                     <label for="date">Année</label>
                     <input type="text" name="annee" id="annee" minlength="4" maxlength="4" required>
-                    <p class="avertissement">Avertissement SVP, entrez la date complète.</p>
+                    <p class="erreur">
+                        <span>
+                            <span class=" screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>Avertissement SVP, entrez la date complète.</p>
                 </div>
             </fieldset>
-            <fieldset class="question">
+            <fieldset class="question ctnValidation">
                 <legend>Lequel de ces monuments est un mausolée?</legend>
                 <ul>
                     <li>
@@ -220,7 +261,7 @@
                                 <source src="images/chateaudIf.jpg" media="(min-width:601px">
                                 <img src="images/chateaudIf.jpg" alt="Château d'If">
                             </picture>
-                            Château d'If
+                            <span>Château d'If </span>
                         </label>
 
                     </li>
@@ -232,7 +273,8 @@
                                 <source src="/images/palaisluxembourg.jpg" media="(min-width:601px">
                                 <img src="images/palaisluxembourg.jpg" alt="Palais Luxembourg">
                             </picture>
-                            Palais Luxembourg
+                            <span> Palais Luxembourg </span>>
+                           
                         </label>
                     </li>
                     <li>
@@ -243,21 +285,33 @@
                                 <source src="/images/tajmahal.jpg" media="(min-width:601px">
                                 <img src="/images/tajmahal.jpg" alt="Tajmahal">
                             </picture>
-                            Taj Mahal
+                            <span>Taj Mahal</span>
                         </label>
                     </li>
                 </ul>
-                <p class="avertissement">Avertissement Veuillez répondre à la question du jour.</p>
+                <p class="erreur">
+                    <span>
+                        <span class=" screen-reader-only">Avertissement</span>
+                        <span class="icone icone--avertissement" aria-hidden="true"></span>
+                    </span>
+                </p>
+                Avertissement Veuillez répondre à la question du jour.</p>
             </fieldset>
 
-            <div>
+            <div class="ctnReglement">
                 <p class="reglement">
-                    <input type="checkbox" name="reglement" value="reglement" id="reglement">
+                    <input type="checkbox" name="reglement" value="reglement" id="reglement" required>
                     <label for="reglement">J'ai lu et j'accepte le <a href="/tp3-textes.pdf">règlement du concours
                         </a>et je
-                        confirme avoir atteint l'âge de majorit dans ma province de résidence.</label>
+                        confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>
                 </p>
-                <p class="avertissement">SVP, acceptez le réglement du concours.</p>
+                <p class="erreur">
+                    <span>
+                        <span class=" screen-reader-only">Avertissement</span>
+                        <span class="icone icone--avertissement" aria-hidden="true"></span>
+                    </span>
+                </p>
+                SVP, acceptez le réglement du concours.</p>
             </div>
             <div class="documentation">
                 <input type="checkbox" name="documentation" value="documentation" id="documentation">
