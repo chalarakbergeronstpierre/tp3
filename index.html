@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tp3-Formulaire accessible</title>
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <header class="header">
+    <header class="conteneur entete">
         <figure>
             <picture>
                 <source src="images/bandeau_600.jpg" media="(max-width:600px)">
@@ -25,7 +25,7 @@
     </header>
     <main class="conteneur rangee">
         <h1 class="titre">Concours</h1>
-        <section class="intro"> 
+        <section class="intro cols_4_de_12"> 
             <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
             <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
                 Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
@@ -35,12 +35,12 @@
             <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
         </section>
 
-        <form class="conteneur rangee" action="index.html" method="get">
+        <form class="form cols_8_de_12" action="index.html" method="get">
             <fieldset>
                 <legend>
                     <h2>Coupon de participation</h2>
                 </legend>
-                <fieldset class="nom">
+                <fieldset class="nom-complet">
                     <legend>Nom complet</legend>
                     <div>
                         <label for="prenom">Prénom</label>
@@ -56,20 +56,20 @@
                 </fieldset>
 
                 <div>
-                    <p>
+                    <p class="adresse">
                         <label for="adresse">Adresse</label>
                         <input type="text" name="adresse" id="adresse" required>
                     </p>
                     <p class="avertissement">L’adresse est requise.</p>
                 </div>
                 <div>
-                    <p>
+                    <p class="ville">
                         <label for="ville">Ville</label>
                         <input type="text" name="ville" id="ville" required>
                     </p>
                     <p class="avertissement">Le nom de la ville ou du village est requis.</p>
                 </div>
-                <div>
+                <div class="region">
                     <label for="pays">Province ou État</label>
                     <select name="listeprovince" id="provinces" required>
                         <option value="">province ou état</option>
@@ -145,14 +145,14 @@
                     </select>
                 </div>
                 <div>
-                    <p>
+                    <p class="codePostal"> 
                         <label for="codePostal">Code Postal (X1X X1X)</label>
                         <input type="text" name="codePostal" id="codePostal" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
                     </p>
                     <p class="avertissement"> Le code postal doit respecter le format X1X 1X1. </p>
                 </div>
                 <div>
-                    <p>
+                    <p class="courriel">
                         <label for="courriel">courriel</label>
                         <input type="email" name="courriel" id="courriel"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
@@ -161,7 +161,7 @@
                 </div>
                 <fieldset>
                     <legend>Téléphone (indicatif - numéro)</legend>
-                    <p>
+                    <p class="telephone">
                         <label for="indicatif">Indicatif</label>
                         <input type="text" name="indicatif" id="indicatif" minlength = "3" maxlength = "3" required pattern="[0-9]{3}">
                     </p>
@@ -179,7 +179,7 @@
             <legend>
                 <h2>Question du jour</h2>
             </legend>
-            <fieldset>
+            <fieldset class="date">
                 <legend>Date à laquelle la question a été posée?</legend>
                 <div>
                     <label for="date">Jour</label>
@@ -209,7 +209,7 @@
                     <p class="avertissement">Avertissement SVP, entrez la date complète.</p>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="question">
                 <legend>Lequel de ces monuments est un mausolée?</legend>
                 <ul>
                     <li>
@@ -251,7 +251,7 @@
             </fieldset>
 
             <div>
-                <p>
+                <p class="reglement">
                     <input type="checkbox" name="reglement" value="reglement" id="reglement">
                     <label for="reglement">J'ai lu et j'accepte le <a href="/tp3-textes.pdf">règlement du concours
                         </a>et je
@@ -259,16 +259,16 @@
                 </p>
                 <p class="avertissement">SVP, acceptez le réglement du concours.</p>
             </div>
-            <div>
+            <div class="documentation">
                 <input type="checkbox" name="documentation" value="documentation" id="documentation">
                 <label for="documentation">Oui, j’accepte de recevoir de la documentation de Radio-Canada</label>
             </div>
-            <p>
+            <p class="soumission">
                 <button name="enregistrer" id="enregistrer">enregistrer</button>
             </p>
         </form>
     </main>
-    <footer>
+    <footer class="credits">
         <small class="credit">2021, Chalarak Bergeron St-Pierre. </small> <br>
         <small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small>
     </footer>
