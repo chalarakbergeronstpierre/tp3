@@ -21,11 +21,11 @@
                     Bell et Voyages Traditours circuits et croisi res.">
             </picture>
         </figure>
-       
+
     </header>
     <main class="conteneur rangee">
         <h1 class="titre">Concours</h1>
-        <section class="intro cols_4_de_12"> 
+        <section class="intro cols_4_de_12">
             <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
             <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
                 Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
@@ -57,7 +57,7 @@
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
                         </p>
-                            Le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
+                        Le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
 
                     </div>
                 </fieldset>
@@ -73,7 +73,7 @@
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                     </p>
-                        L’adresse est requise.</p>
+                    L’adresse est requise.</p>
                 </div>
                 <div class=" ctnVille ctnValidation">
                     <p class="ville">
@@ -86,7 +86,7 @@
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                     </p>
-                        Le nom de la ville ou du village est requis.</p>
+                    Le nom de la ville ou du village est requis.</p>
                 </div class="ctnRegion ctnValidation">
                 <div class="region">
                     <label for="pays">Province ou État</label>
@@ -164,9 +164,10 @@
                     </select>
                 </div>
                 <div class="ctnCodePostal ctnValidation">
-                    <p class="codePostal"> 
+                    <p class="codePostal">
                         <label for="codePostal">Code Postal (X1X X1X)</label>
-                        <input type="text" name="codePostal" id="codePostal" title="X1X X1X" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+                        <input type="text" name="codePostal" id="codePostal" title="X1X X1X" required
+                            pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
                     </p>
                     <p class="erreur">
                         <span>
@@ -174,7 +175,7 @@
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                     </p>
-                        Le code postal doit respecter le format X1X 1X1. </p>
+                    Le code postal doit respecter le format X1X 1X1. </p>
                 </div>
                 <div class="ctnCourriel ctnValidation">
                     <p class="courriel">
@@ -182,25 +183,27 @@
                         <input type="email" name="courriel" id="courriel"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     <p class="erreur">
-                            <span>
-                                <span class=" screen-reader-only">Avertissement</span>
-                                <span class="icone icone--avertissement" aria-hidden="true"></span>
-                            </span>
-                        </p>
-                        Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
+                        <span>
+                            <span class=" screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>
+                    Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
                     </p>
                 </div>
                 <fieldset class="ctnTel ctnValidation">
                     <legend>Téléphone (indicatif - numéro)</legend>
                     <p class="telephone">
                         <label for="indicatif">Indicatif</label>
-                        <input type="text" name="indicatif" id="indicatif" minlength = "3" maxlength = "3" required pattern="[0-9]{3}">
+                        <input type="text" name="indicatif" id="indicatif" minlength="3" maxlength="3" required
+                            pattern="[0-9]{3}">
                     </p>
                     <p>-</p>
                     <div>
                         <p>
                             <label for="numero">Numéro</label>
-                            <input type="text" name="numero" id="numero" minlength = "8" maxlength = "8"  required pattern="[0-9]{3}-[0-9]{4}">
+                            <input type="text" name="numero" id="numero" minlength="8" maxlength="8" required
+                                pattern="[0-9]{3}-[0-9]{4}">
                         </p>
                         <p class="erreur">
                             <span>
@@ -212,10 +215,14 @@
                     </div>
                 </fieldset>
             </fieldset>
-            <legend>
-                <h2>Question du jour</h2>
-            </legend>
+
             <fieldset class="date ctnValidation">
+                <legend>
+                    <h2>Question du jour</h2>
+
+                </legend>
+
+
                 <legend>Date à laquelle la question a été posée?</legend>
                 <div>
                     <label for="date">Jour</label>
@@ -249,12 +256,13 @@
                         </span>
                     </p>Avertissement SVP, entrez la date complète.</p>
                 </div>
-            </fieldset>
+           
             <fieldset class="question ctnValidation">
                 <legend>Lequel de ces monuments est un mausolée?</legend>
                 <ul>
                     <li>
-                        <input type="radio" name="choix" value="chateau" id="chateau" required>
+                        <input class="screen-reader-only" type="radio" name="choix" value="chateau" id="chateau"
+                            required>
                         <label for="chateau">
                             <picture>
                                 <source src="/images/chateaudIf-small.jpg" media="(max-width:600px)">
@@ -266,7 +274,7 @@
 
                     </li>
                     <li>
-                        <input type="radio" name="choix" value="palais" id="palais">
+                        <input class="screen-reader-only" type="radio" name="choix" value="palais" id="palais">
                         <label for="palais">
                             <picture>
                                 <source src="/images/palaisluxembourg-small.jpg" media="(max-width:600px">
@@ -274,7 +282,7 @@
                                 <img src="images/palaisluxembourg.jpg" alt="Palais Luxembourg">
                             </picture>
                             <span> Palais Luxembourg </span>>
-                           
+
                         </label>
                     </li>
                     <li>
@@ -296,7 +304,8 @@
                     </span>
                 </p>
                 Avertissement Veuillez répondre à la question du jour.</p>
-            </fieldset>
+            </fieldset> 
+        </fieldset>
 
             <div class="ctnReglement">
                 <p class="reglement">
