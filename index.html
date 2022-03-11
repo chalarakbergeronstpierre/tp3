@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div>
-        <header class="conteneur entete">
+    <div class="conteneur">
+        <header role="entete">
             <figure>
                 <picture>
                     <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
@@ -23,11 +23,10 @@
                     Bell et Voyages Traditours circuits et croisières.">
                 </picture>
             </figure>
-
         </header>
-        <main class="conteneur rangee">
+        <main class="rangee" role="main">
             <h1 class="titre">Concours</h1>
-            <aside class="intro cols_4_de_12">
+            <aside class="intro cols_4_de_12" role="complementary">
                 <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
                 <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant
                     Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi
@@ -36,7 +35,7 @@
                 </p>
                 <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
             </aside>
-            <form action="index.html" class="form cols_8_de_12" method="get" role="form">
+            <form action="index.html" class="cols_8_de_12" method="get" role="form">
                 <fieldset>
                     <legend>
                         <h2>Coupon de participation</h2>
@@ -221,8 +220,9 @@
                             Attention, le numéro de téléphone doit comporter un trait d’union. </p>
                         </div>
                     </fieldset>
-                
-                    <fieldset>
+                </fieldset>
+
+                <fieldset>
                     <legend>
                         <h2>Question du jour</h2>
                     </legend>
@@ -239,23 +239,23 @@
                                 <label for="date">Mois</label>
                                 <select name="mois" id="mois">
                                     <option value="">sélectionnez</option>
-                                    <option value="janvier">Janvier</option>
-                                    <option value="fevrier">Février</option>
-                                    <option value="mars">Mars</option>
-                                    <option value="avril">Avril</option>
-                                    <option value="mai">Mai</option>
-                                    <option value="juin">Juin</option>
-                                    <option value="juillet">Juillet</option>
-                                    <option value="août">Août</option>
-                                    <option value="septembre">Septembre</option>
-                                    <option value="octobre">Octobre</option>
-                                    <option value="novembre">Novembre</option>
-                                    <option value="decembre">Décembre</option>
+                                    <option value="01">Janvier</option>
+                                    <option value="02">Février</option>
+                                    <option value="03">Mars</option>
+                                    <option value="04">Avril</option>
+                                    <option value="05">Mai</option>
+                                    <option value="06">Juin</option>
+                                    <option value="07">Juillet</option>
+                                    <option value="08">Août</option>
+                                    <option value="09">Septembre</option>
+                                    <option value="10">Octobre</option>
+                                    <option value="11">Novembre</option>
+                                    <option value="12">Décembre</option>
                                 </select>
                             </div>
                             <div class="cols_4_de_12">
-                                <label for="date">Année</label>
-                                <input type="text" name="annee" id="annee" minlength="4" maxlength="4" required>
+                                <label for="annee">Année</label>
+                                <input type="text" name="annee" id="annee" required min="2020" max="2022">
                                 <p class="erreur">
                                     <span>Message Erreur
                                         <span class=" screen-reader-only">Avertissement</span>
@@ -263,93 +263,96 @@
                                     </span>
                                 </p>Avertissement SVP, entrez la date complète.</p>
                             </div>
+                        </div>
                     </fieldset>
 
                     <fieldset class="question ctnValidation">
-                        <legend><h4>Lequel de ces monuments est un mausolée?</h4></legend>
-                            <div class="conteneurQuestion">
-                                <ul class="rangee">
-                                    <li class="cols_4_de_12">
-                                        <input class="screen-reader-only" type="radio" name="choix" value="chateau"
-                                            id="chateau" required>
-                                        <label for="chateau">
-                                            <picture>
-                                                <source src="/images/chateaudIf-small.jpg" media="(max-width:600px)">
-                                                <source src="images/chateaudIf.jpg" media="(min-width:601px">
-                                                <img src="images/chateaudIf.jpg" alt="Château d'If">
-                                            </picture>
-                                            <span>Château d'If </span>
-                                        </label>
+                        <legend>
+                            <h4>Lequel de ces monuments est un mausolée?</h4>
+                        </legend>
+                        <div class="conteneurQuestion">
+                            <ul class="rangee">
+                                <li class="cols_4_de_12">
+                                    <input class="screen-reader-only" type="radio" name="choix" value="chateau"
+                                        id="chateau" required>
+                                    <label for="chateau">
+                                        <picture>
+                                            <source src="/images/chateaudIf-small.jpg" media="(max-width:600px)">
+                                            <source src="images/chateaudIf.jpg" media="(min-width:601px">
+                                            <img src="images/chateaudIf.jpg" alt="Château d'If">
+                                        </picture>
+                                        <span>Château d'If </span>
+                                    </label>
 
-                                    </li>
-                                    <li class="cols_4_de_12">
-                                        <input class="screen-reader-only" type="radio" name="choix" value="palais"
-                                            id="palais">
-                                        <label for="palais">
-                                            <picture>
-                                                <source src="/images/palaisluxembourg-small.jpg"
-                                                    media="(max-width:600px">
-                                                <source src="/images/palaisluxembourg.jpg" media="(min-width:601px">
-                                                <img src="images/palaisluxembourg.jpg" alt="Palais Luxembourg">
-                                            </picture>
-                                            <span> Palais Luxembourg </span>
+                                </li>
+                                <li class="cols_4_de_12">
+                                    <input class="screen-reader-only" type="radio" name="choix" value="palais"
+                                        id="palais">
+                                    <label for="palais">
+                                        <picture>
+                                            <source src="/images/palaisluxembourg-small.jpg" media="(max-width:600px">
+                                            <source src="/images/palaisluxembourg.jpg" media="(min-width:601px">
+                                            <img src="images/palaisluxembourg.jpg" alt="Palais Luxembourg">
+                                        </picture>
+                                        <span> Palais Luxembourg </span>
 
-                                        </label>
-                                    </li>
-                                    <li class=" cols_4_de_12">
-                                        <input class="screen-reader-only" type="radio" name="choix" value="taj"
-                                            id="taj">
-                                        <label for="taj">
-                                            <picture>
-                                                <source src="/images/tajmahal-small.jpg" media="(max-width:600px">
-                                                <source src="/images/tajmahal.jpg" media="(min-width:601px">
-                                                <img src="/images/tajmahal.jpg" alt="Tajmahal">
-                                            </picture>
-                                            <span>Taj Mahal</span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <p class="erreur">
-                                <span>Message Erreur
-                                    <span class=" screen-reader-only">Avertissement</span>
-                                    <span class="icone icone--avertissement" aria-hidden="true"></span>
-                                </span>
-                            </p>
-                            Avertissement Veuillez répondre à la question du jour.</p>
-
+                                    </label>
+                                </li>
+                                <li class=" cols_4_de_12">
+                                    <input class="screen-reader-only" type="radio" name="choix" value="taj" id="taj">
+                                    <label for="taj">
+                                        <picture>
+                                            <source src="/images/tajmahal-small.jpg" media="(max-width:600px">
+                                            <source src="/images/tajmahal.jpg" media="(min-width:601px">
+                                            <img src="/images/tajmahal.jpg" alt="Tajmahal">
+                                        </picture>
+                                        <span>Taj Mahal</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="erreur">
+                            <span>Message Erreur
+                                <span class=" screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                        </p>
+                        Avertissement Veuillez répondre à la question du jour.</p>
                     </fieldset>
-                </fieldset>
+
+                    <div class="reglement ctnValidation">
+                        <p class="reglement">
+                            <input type="checkbox" name="reglement" value="reglement" id="reglement" required>
+                            <label for="reglement">J'ai lu et j'accepte le <a href="/tp3-textes.pdf">règlement du
+                                    concours
+                                </a>et je
+                                confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>
+                        </p>
+                        <p class="erreur">
+                            <span>
+                                <span class=" screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                        </p>
+                        SVP, acceptez le ré>glement du concours.</p>
+                    </div>
+                    <div>
+
+                        <p class="documentation">
+                            <input type="checkbox" name="documentation" value="documentation" id="documentation">
+                            <label for="documentation">Oui, j’accepte de recevoir de la documentation de
+                                Radio-Canada</label>
+                        </p>
+                        <p class="soumission">
+                            <button name="enregistrer" id="enregistrer">Soumettre le formulaire</button>
+                        </p>
+                    </div>
+            </form>
+        </main>
     </div>
 
-
-    <div class="ctnReglement">
-        <p class="reglement">
-            <input type="checkbox" name="reglement" value="reglement" id="reglement" required>
-            <label for="reglement">J'ai lu et j'accepte le <a href="/tp3-textes.pdf">règlement du concours
-                </a>et je
-                confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>
-        </p>
-        <p class="erreur">
-            <span>
-                <span class=" screen-reader-only">Avertissement</span>
-                <span class="icone icone--avertissement" aria-hidden="true"></span>
-            </span>
-        </p>
-        SVP, acceptez le réglement du concours.</p>
-    </div>
-    <div class="documentation">
-        <input type="checkbox" name="documentation" value="documentation" id="documentation">
-        <label for="documentation">Oui, j’accepte de recevoir de la documentation de Radio-Canada</label>
-    </div>
-    <p class="soumission">
-        <button name="enregistrer" id="enregistrer">Soumettre le formulaire</button>
-    </p>
-    </form>
-    </main>
-    </div>
     <footer class="credits">
-        <small class="credit">2021, Chalarak Bergeron St-Pierre. </small> <br>
+        <small class="credit">2022, Chalarak Bergeron St-Pierre. </small> <br>
         <small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small>
     </footer>
 </body>
