@@ -81,10 +81,12 @@ main{
 
 fieldset{
    background-color: #ECECEC;
-   border-radius: 20px;
+   border-radius: 2rem;
    width: 100%;
+   padding-top: 30px;
 }
 
+l
 
 
 .ctnReglement{
@@ -102,11 +104,40 @@ button{
    margin: 20px;
 }
 
+button:hover{
+   border: red;
+}
+
+
 
 /**question du jour**/
+/*disposition en rangée des images*/
+@media(min-width:600px){
+.conteneurQuestion{
+   display: flex;
+   flex-basis: 1 0 auto;
+   flex-wrap: wrap;
+   list-style-type: disc;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   padding-inline-start: 40px;
 
-ul{
+   }
+}
+
+.nom-complet{
+   justify-content: flex-start;
+}
+@media(min-width:600px){
+.rangee{
    list-style: none;
+   display: flex;
+   justify-content: flex-start;
+   align-items: stretch;
+   flex-wrap: wrap;
+   }
 }
 
 label{
@@ -128,6 +159,19 @@ input[type=radio]+label {
 }
 [type=radio]:checked+label { 
    border:2px solid #068221;
+}
+.erreur{
+   color: red;
+}
+.screen-reader-only, .visuallyhidden {
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
 }
 
 /*footer*/

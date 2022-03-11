@@ -7,18 +7,19 @@
     <title>tp3-Formulaire accessible</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="/css/styles.css">
+    
 </head>
 
 <body>
     <header class="conteneur entete">
         <figure>
             <picture>
-                <source src="images/bandeau_600.jpg" media="(max-width:600px)">
-                <source src="images/bandeau_1200.jpg" media="(min-width:601px)">
+                <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
+                <source srcset="images/bandeau_1200.jpg" media="(min-width:601px)">
                 <img src="images/bandeau_1200.jpg" alt="Concours ICI Premi re. Voyage de r ve. Au menu.  coutez Gravel le
                     Matin en semaine 5h30 au 95,1. Courez la chance de gagner un cr dit
                     voyage de 20 000$ ! Commandit  par Ici Premi re, Montr al en Lumi re,
-                    Bell et Voyages Traditours circuits et croisi res.">
+                    Bell et Voyages Traditours circuits et croisières.">
             </picture>
         </figure>
 
@@ -52,7 +53,7 @@
                             <input type="text" name="nom" id="nom" required>
                         </p>
                         <p class="erreur">
-                            <span>
+                            <span>Message Erreur
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
@@ -68,8 +69,8 @@
                         <input type="text" name="adresse" id="adresse" required>
                     </p>
                     <p class="erreur">
-                        <span>
-                            <span class=" screen-reader-only">Avertissement</span>
+                        <span>Message Erreur
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                     </p>
@@ -81,7 +82,7 @@
                         <input type="text" name="ville" id="ville" required>
                     </p>
                     <p class="erreur">
-                        <span>
+                        <span>Message Erreur
                             <span class=" screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
@@ -170,7 +171,7 @@
                             pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
                     </p>
                     <p class="erreur">
-                        <span>
+                        <span>Message Erreur
                             <span class=" screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
@@ -183,7 +184,7 @@
                         <input type="email" name="courriel" id="courriel"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     <p class="erreur">
-                        <span>
+                        <span>Message Erreur
                             <span class=" screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
@@ -206,7 +207,7 @@
                                 pattern="[0-9]{3}-[0-9]{4}">
                         </p>
                         <p class="erreur">
-                            <span>
+                            <span>Message Erreur
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
@@ -250,7 +251,7 @@
                     <label for="date">Année</label>
                     <input type="text" name="annee" id="annee" minlength="4" maxlength="4" required>
                     <p class="erreur">
-                        <span>
+                        <span>Message Erreur
                             <span class=" screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
@@ -259,8 +260,9 @@
            
             <fieldset class="question ctnValidation">
                 <legend>Lequel de ces monuments est un mausolée?</legend>
-                <ul>
-                    <li>
+                <div class="conteneurQuestion">
+                <ul class="rangee">
+                    <li class="cols_4_de_12">
                         <input class="screen-reader-only" type="radio" name="choix" value="chateau" id="chateau"
                             required>
                         <label for="chateau">
@@ -273,7 +275,7 @@
                         </label>
 
                     </li>
-                    <li>
+                    <li class="cols_4_de_12">
                         <input class="screen-reader-only" type="radio" name="choix" value="palais" id="palais">
                         <label for="palais">
                             <picture>
@@ -285,8 +287,8 @@
 
                         </label>
                     </li>
-                    <li>
-                        <input type="radio" name="choix" value="taj" id="taj">
+                    <li class=" cols_4_de_12">
+                        <input class="screen-reader-only" type="radio" name="choix" value="taj" id="taj">
                         <label for="taj">
                             <picture>
                                 <source src="/images/tajmahal-small.jpg" media="(max-width:600px">
@@ -297,8 +299,9 @@
                         </label>
                     </li>
                 </ul>
+            </div>
                 <p class="erreur">
-                    <span>
+                    <span>Message Erreur
                         <span class=" screen-reader-only">Avertissement</span>
                         <span class="icone icone--avertissement" aria-hidden="true"></span>
                     </span>
