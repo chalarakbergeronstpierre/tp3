@@ -28,7 +28,7 @@
 /* Charte typographique
    ========================================================================== */
  
-
+@import url(tp3_typo.css);
 
 /* Grille
    ========================================================================== */
@@ -71,8 +71,12 @@ main{
  background-color:white;
 
 }
+
+.titre{
+   margin-left: 20px;
+}
 .intro{
-   margin: white;
+   margin-left: 20px;
 }
 @media(min-width:601px){
    .intro{
@@ -147,7 +151,7 @@ button:hover{
 .rangee{
    list-style: none;
    display: flex;
-   justify-content: flex-start;
+   justify-content: space-between;
    align-items: stretch;
    flex-wrap: wrap;
    }
