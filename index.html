@@ -7,7 +7,6 @@
     <title>tp3-Formulaire accessible</title>
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 
 <body>
@@ -202,13 +201,13 @@
                         <div class="rangee">
                             <p class="cols_3_de_12">
                                 <label for="indicatif">Indicatif</label>
-                                <input type="text" name="indicatif" id="indicatif" minlength="3" maxlength="3" required
+                                <input type="tel" name="indicatif" id="indicatif" minlength="3" maxlength="3" required
                                     pattern="[0-9]{3}">
                             </p>
                             <p class="cols_1_de_12 tiret">-</p>
                             <p>
                                 <label for="numero">Numéro</label>
-                                <input type="text" name="numero" id="numero" minlength="8" maxlength="8" required
+                                <input type="tel" name="numero" id="numero" minlength="8" maxlength="8" required
                                     pattern="[0-9]{3}-[0-9]{4}">
                             </p>
                             <p class="erreur">
@@ -226,16 +225,16 @@
                     <legend>
                         <h2>Question du jour</h2>
                     </legend>
-                    <fieldset class="date ctnValidation">
+                    <fieldset>
                         <legend>
                             <h4>Date à laquelle la question a été posée?</h4>
                         </legend>
                         <div class="rangee">
-                            <div class="cols_4_de_12">
+                            <p class="cols_4_de_12">
                                 <label for="date">Jour</label>
-                                <input type="text" name="jour" id="jour" required>
-                            </div>
-                            <div class="cols_4_de_12">
+                                <input type="number" name="jour" id="jour" required min="1" max="31">
+                            </p>
+                            <p class="cols_4_de_12">
                                 <label for="date">Mois</label>
                                 <select name="mois" id="mois">
                                     <option value="">sélectionnez</option>
@@ -252,18 +251,19 @@
                                     <option value="11">Novembre</option>
                                     <option value="12">Décembre</option>
                                 </select>
-                            </div>
-                            <div class="cols_4_de_12">
+                            </p>
+                            <p class="cols_4_de_12">
                                 <label for="annee">Année</label>
-                                <input type="text" name="annee" id="annee" required min="2020" max="2022">
-                                <p class="erreur">
-                                    <span>Message Erreur
-                                        <span class=" screen-reader-only">Avertissement</span>
-                                        <span class="icone icone--avertissement" aria-hidden="true"></span>
-                                    </span>
-                                </p>Avertissement SVP, entrez la date complète.</p>
-                            </div>
+                                <input type="number" name="annee" id="annee" required min="2020" max="2022">
+                            </p>
                         </div>
+                        <p class="erreur">
+                            <span>Message Erreur
+                                <span class=" screen-reader-only">Avertissement</span>
+                                <span class="icone icone--avertissement" aria-hidden="true"></span>
+                            </span>
+                        </p>Avertissement SVP, entrez la date complète.</p>
+
                     </fieldset>
 
                     <fieldset class="question ctnValidation">
@@ -319,41 +319,42 @@
                         </p>
                         Avertissement Veuillez répondre à la question du jour.</p>
                     </fieldset>
+                </fieldset>
 
-                    <div class="reglement ctnValidation">
-                        <p class="reglement">
-                            <input type="checkbox" name="reglement" value="reglement" id="reglement" required>
-                            <label for="reglement">J'ai lu et j'accepte le <a href="/tp3-textes.pdf">règlement du
-                                    concours
-                                </a>et je
-                                confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>
-                        </p>
-                        <p class="erreur">
-                            <span>
-                                <span class=" screen-reader-only">Avertissement</span>
-                                <span class="icone icone--avertissement" aria-hidden="true"></span>
-                            </span>
-                        </p>
-                        SVP, acceptez le ré>glement du concours.</p>
-                    </div>
-                    <div>
+                <div class="reglement ctnValidation">
+                    <p class="reglement">
+                        <input type="checkbox" name="reglement" value="reglement" id="reglement" required>
+                        <label for="reglement">J'ai lu et j'accepte le <a href="/tp3-textes.pdf">règlement du
+                                concours
+                            </a>et je
+                            confirme avoir atteint l'âge de majorité dans ma province de résidence.</label>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class=" screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    </p>
+                    SVP, acceptez le réglement du concours.</p>
+                </div>
+                <div>
 
-                        <p class="documentation">
-                            <input type="checkbox" name="documentation" value="documentation" id="documentation">
-                            <label for="documentation">Oui, j’accepte de recevoir de la documentation de
-                                Radio-Canada</label>
-                        </p>
-                        <p class="soumission">
-                            <button name="enregistrer" id="enregistrer">Soumettre le formulaire</button>
-                        </p>
-                    </div>
+                    <p class="documentation">
+                        <input type="checkbox" name="documentation" value="documentation" id="documentation">
+                        <label for="documentation">Oui, j’accepte de recevoir de la documentation de
+                            Radio-Canada</label>
+                    </p>
+                    <p class="soumission">
+                        <button name="enregistrer" id="enregistrer">Soumettre le formulaire</button>
+                    </p>
+                </div>
             </form>
         </main>
     </div>
 
     <footer class="credits">
         <small class="credit">2022, Chalarak Bergeron St-Pierre. </small> <br>
-        <small>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</small>
+        <small>Réalisé dans le cadre du cours Intégration II, <a href="https://www.csfoy.ca/programmes/tous-les-programmes/programmes-techniques/techniques-dintegration-multimedia-web-et-apps/">   Programme TIM</a>, <a href="https://www.csfoy.ca/accueil/">Cégep de Sainte-Foy</a>.</small>
     </footer>
 </body>
 

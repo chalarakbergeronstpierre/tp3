@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Chalarak Bergeron St-Pirre, 2162572@csfoy.ca
  *
  * TABLE DES MATIERES
  * Normalize
@@ -12,6 +12,7 @@
  *** entête
  *** main
  *** formulaire
+ *** question du jour
  *** interactivité
  *** footer
  */
@@ -90,7 +91,7 @@ main{
 }
 
 
-/* formulaire */
+/*** formulaire ***/
 
 fieldset{
    background-color: #ECECEC;
@@ -100,7 +101,6 @@ fieldset{
 }
 
 l
-
 
 .ctnReglement{
    margin: 20px;
@@ -118,15 +118,34 @@ button{
 }
 
 button:hover{
-   border: red;
+   border: 0px;
+}
+
+/*input focus */
+input:focus{
+   outline : #09c231 auto 5px;
 }
 
 
+.nom-complet{
+   justify-content: flex-start;
+}
 
-/**question du jour**/
+
+/***question du jour***/
 /*disposition en rangée des images*/
 .rangee{
    list-style: none;
+} 
+
+@media(min-width:600px){
+.rangee{
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   flex-wrap: wrap;
+   }
 }
 
 @media(min-width:600px){
@@ -144,18 +163,6 @@ button:hover{
    }
 }
 
-.nom-complet{
-   justify-content: flex-start;
-}
-@media(min-width:600px){
-.rangee{
-   list-style: none;
-   display: flex;
-   justify-content: space-between;
-   align-items: stretch;
-   flex-wrap: wrap;
-   }
-}
 
 label{
    /* placer les étiquettes au-dessus des champs de saisie */
@@ -166,7 +173,7 @@ input[type=radio]+label {
    text-align: center;
    border:2px solid transparent;
 }
-/*** Interactivité ***/
+/*** Interactivité boutons radios ***/
 [type=radio]:hover+label { 
    cursor: pointer;
 }
@@ -191,7 +198,7 @@ input[type=radio]+label {
    width: 1px;
 }
 
-/*footer*/
+/*** footer ***/
 footer{
    text-align: center;
 }
