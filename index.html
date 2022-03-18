@@ -1,24 +1,27 @@
 <!doctype html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tp3-Formulaire accessible</title>
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="/css/styles.css">
+<!--    attention au chemin d'accès pas de / devant un dossier qui est au même niveau de répertoires-->
+<!--    <link rel="stylesheet" href="/css/styles.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div class="conteneur">
-        <header role="entete">
+        <header role="banner">
             <figure>
                 <picture>
                     <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
                     <source srcset="images/bandeau_1200.jpg" media="(min-width:601px)">
-                    <img src="images/bandeau_1200.jpg" alt="Concours ICI Premi re. Voyage de r ve. Au menu.  coutez Gravel le
-                    Matin en semaine 5h30 au 95,1. Courez la chance de gagner un cr dit
-                    voyage de 20 000$ ! Commandit  par Ici Premi re, Montr al en Lumi re,
+                    <img src="images/bandeau_1200.jpg"
+                         alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le
+                    Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit
+                    voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière,
                     Bell et Voyages Traditours circuits et croisières.">
                 </picture>
             </figure>
@@ -58,13 +61,12 @@
                             </p>
                         </div>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
+                            Le prénom ou le nom comporte un ou plusieurs caractères interdits.
                         </p>
-
-                        <p>Le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
                     </fieldset>
 
                     <div class="Adresse ctnValidation">
@@ -73,12 +75,12 @@
                             <input type="text" name="adresse" id="adresse" required>
                         </p>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class="screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
+                            L’adresse est requise.
                         </p>
-                        L’adresse est requise.</p>
                     </div>
                     <div class=" Ville ctnValidation">
                         <p class="ville">
@@ -86,13 +88,13 @@
                             <input type="text" name="ville" id="ville" required>
                         </p>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
+                            Le nom de la ville ou du village est requis.
                         </p>
-                        Le nom de la ville ou du village est requis.</p>
-                    </div class="Region ctnValidation">
+                    </div>
                     <div class="region">
                         <label for="pays">Province ou État</label>
                         <select name="listeprovince" id="provinces" required>
@@ -175,12 +177,12 @@
                                 pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
                         </p>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
+                            Le code postal doit respecter le format X1X 1X1.
                         </p>
-                        Le code postal doit respecter le format X1X 1X1. </p>
                     </div>
                     <div class="ctnCourriel ctnValidation">
                         <p class="courriel">
@@ -188,13 +190,13 @@
                             <input type="email" name="courriel" id="courriel"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
+                            Attention, le courriel comporte un ou plusieurs caractères interdits.
                         </p>
-                        Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
-                        </p>
+
                     </div>
                     <fieldset class="telephone ctnValidation">
                         <legend>Téléphone (indicatif - numéro)</legend>
@@ -210,14 +212,15 @@
                                 <input type="tel" name="numero" id="numero" minlength="8" maxlength="8" required
                                     pattern="[0-9]{3}-[0-9]{4}">
                             </p>
-                            <p class="erreur">
-                                <span>Message Erreur
+                        </div>
+
+                        <p class="erreur">
+                                <span>
                                     <span class=" screen-reader-only">Avertissement</span>
                                     <span class="icone icone--avertissement" aria-hidden="true"></span>
                                 </span>
-                            </p>
-                            Attention, le numéro de téléphone doit comporter un trait d’union. </p>
-                        </div>
+                            Attention, le numéro de téléphone doit comporter un trait d’union.
+                        </p>
                     </fieldset>
                 </fieldset>
 
@@ -258,7 +261,7 @@
                             </p>
                         </div>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
@@ -312,7 +315,7 @@
                             </ul>
                         </div>
                         <p class="erreur">
-                            <span>Message Erreur
+                            <span>
                                 <span class=" screen-reader-only">Avertissement</span>
                                 <span class="icone icone--avertissement" aria-hidden="true"></span>
                             </span>
